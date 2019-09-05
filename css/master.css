@@ -64,7 +64,7 @@ pre[class*="language-"] {
 
 html {
   scroll-behavior: smooth;
-  color: rgba(0, 0, 0, 0.8); }
+  color: #333333; }
 
 body {
   overflow-x: hidden; }
@@ -108,7 +108,7 @@ img {
   .md h6,
   .markdown-body h6 {
     font-size: 0.875rem;
-    color: rgba(0, 0, 0, 0.48); }
+    color: #858585; }
   .md p,
   .markdown-body p {
     font-size: 1rem;
@@ -120,8 +120,10 @@ img {
   margin: 2rem 0; }
   .abc figcaption {
     max-width: 800px;
+    line-height: 2em;
+    color: #858585;
+    font-size: 0.875rem;
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    text-align: center;
-    padding: 0 20px; }
+    padding: 0 1rem; }
