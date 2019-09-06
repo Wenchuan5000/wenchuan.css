@@ -1,5 +1,12 @@
+$primaryLineHeight: 1.75
+$secondaryLineHeight: $primaryLineHeight - 0.25
+
+
+// ====================
+// 标题们
+// ====================
 h1, h2, h3, h4, h5, h6
-    line-height: 1.75
+    line-height: $secondaryLineHeight
     margin-top: 1em
     margin-bottom: 1rem
     font-weight: bold
@@ -23,8 +30,179 @@ h6
     font-size: 0.875rem
     color: $hexGrey
 
+
+// ====================
+// 段落们
+// ====================
 p
     font-size: 1rem
-    line-height: 2em
+    line-height: $primaryLineHeight
     margin-top: 1em
     margin-bottom: 1em
+
+
+// ====================
+// 链接们
+// ====================
+p, li, table, blockquote
+    a
+        color: $brandColor
+        cursor: pointer
+        // text-decoration: underline
+
+        &:hover
+            // text-decoration: underline
+
+
+// ====================
+// 列表们
+// ====================
+li
+    font-size: 1rem
+    line-height: 2em
+
+// 仅设置第一层的列表样式
+&>
+    ul, ol
+        margin-top: 1rem
+        margin-bottom: 1rem
+
+ul, ol
+    padding-left: 2rem
+    // 这里可以改变除第一层外的列表 padding-left
+
+ol
+    list-style-type: decimal
+
+ul
+    list-style-type: disc
+
+li
+    ol
+        list-style-type: lower-roman
+
+    ul
+        list-style-type: circle
+
+    li
+        ol
+            list-style-type: lower-alpha
+
+        ul
+            list-style-type: square
+
+
+// ====================
+// 引用块们
+// ====================
+blockquote
+    background-color: $hexBg2
+    color: $hexGrey
+    padding: 0.5rem 1rem
+    border-left: 2px solid $hexLightPale
+
+    &> *
+        font-size: 87.5%
+
+
+// ====================
+// 图片们
+// ====================
+
+// figure 图片
+figure
+    display: table
+    margin-left: auto
+    margin-right: auto
+    margin-top: 2rem
+    margin-bottom: 2rem
+
+    figcaption
+        display: table-caption
+        caption-side: bottom
+        margin-top: 0.5rem
+
+        &> *
+            font-size: 87.5%
+            color: $hexGrey
+
+        &>
+            p:first-of-type
+                margin-top: 0
+
+            p:last-of-type
+                margin-bottom: 0
+
+// 赤裸的图片
+&> img
+    margin-left: auto
+    margin-right: auto
+    margin-top: 2rem
+    margin-bottom: 2rem
+
+
+// ====================
+// 分割线们
+// ====================
+hr
+    border: none
+    width: 100%
+    height: 1px
+    border-bottom: 1px solid $hexLightPale
+    margin-top: 1rem
+    margin-bottom: 1rem
+
+
+// ====================
+// 上标和下标们
+// ====================
+sup, sub
+    font-size: smaller
+    line-height: 1
+
+sup
+    vertical-align: super
+
+sub
+    vertical-align: sub
+
+
+// ====================
+// 强调们
+// ====================
+strong, b
+    font-weight: bold
+
+del
+    text-decoration: line-through
+    color: $hexGrey
+
+em
+    font-style: italic
+
+mark
+    background-color: rgba($brandColor, 0.24)
+    padding-top: 0.125em
+    padding-bottom: 0.125em
+
+u
+    border-bottom: 1px solid rgba($brandColor, 0.32)
+    padding-bottom: 2px
+
+
+// ====================
+// 细节们
+// ====================
+details
+    margin-top: 1rem
+    margin-bottom: 1rem
+    margin-left: 1rem
+
+    summary
+        font-weight: bold
+        margin-left: -1rem
+
+
+// ====================
+// 表格
+// ====================

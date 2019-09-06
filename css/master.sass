@@ -11,7 +11,18 @@
         color: $hexGrey
         font-size: 0.875rem
         margin: 0 auto
-        margin-top: 1rem
+        margin-top: 0.5rem
         margin-bottom: 1rem
         // text-align: center
         padding: 0 1rem
+
+        &> *
+            font-size: 87.5%
+            color: $hexGrey
+
+        &>
+            p:first-of-type
+                margin-top: 0
+
+            p:last-of-type
+                margin-bottom: 0

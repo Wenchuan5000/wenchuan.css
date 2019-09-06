@@ -42,6 +42,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.md .gridGallery[class*="figList"] li figure .imgFrame,
+.markdown-body .gridGallery[class*="figList"] li figure .imgFrame {
+  border: 1px solid rgba(0, 0, 0, 0.08); }
+
 html {
   font-size: 16px; }
 
@@ -85,7 +89,7 @@ img {
   .markdown-body h4,
   .markdown-body h5,
   .markdown-body h6 {
-    line-height: 1.75;
+    line-height: 1.5;
     margin-top: 1em;
     margin-bottom: 1rem;
     font-weight: bold; }
@@ -112,9 +116,199 @@ img {
   .md p,
   .markdown-body p {
     font-size: 1rem;
-    line-height: 2em;
+    line-height: 1.75;
     margin-top: 1em;
     margin-bottom: 1em; }
+  .md p a, .md li a, .md table a, .md blockquote a,
+  .markdown-body p a,
+  .markdown-body li a,
+  .markdown-body table a,
+  .markdown-body blockquote a {
+    color: #33C3C2;
+    cursor: pointer; }
+  .md li,
+  .markdown-body li {
+    font-size: 1rem;
+    line-height: 2em; }
+  .md > ul, .md > ol,
+  .markdown-body > ul,
+  .markdown-body > ol {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .md ul, .md ol,
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-left: 2rem; }
+  .md ol,
+  .markdown-body ol {
+    list-style-type: decimal; }
+  .md ul,
+  .markdown-body ul {
+    list-style-type: disc; }
+  .md li ol,
+  .markdown-body li ol {
+    list-style-type: lower-roman; }
+  .md li ul,
+  .markdown-body li ul {
+    list-style-type: circle; }
+  .md li li ol,
+  .markdown-body li li ol {
+    list-style-type: lower-alpha; }
+  .md li li ul,
+  .markdown-body li li ul {
+    list-style-type: square; }
+  .md blockquote,
+  .markdown-body blockquote {
+    background-color: #fafafa;
+    color: #858585;
+    padding: 0.5rem 1rem;
+    border-left: 2px solid #ebebeb; }
+    .md blockquote > *,
+    .markdown-body blockquote > * {
+      font-size: 87.5%; }
+  .md figure,
+  .markdown-body figure {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+    .md figure figcaption,
+    .markdown-body figure figcaption {
+      display: table-caption;
+      caption-side: bottom;
+      margin-top: 0.5rem; }
+      .md figure figcaption > *,
+      .markdown-body figure figcaption > * {
+        font-size: 87.5%;
+        color: #858585; }
+      .md figure figcaption > p:first-of-type,
+      .markdown-body figure figcaption > p:first-of-type {
+        margin-top: 0; }
+      .md figure figcaption > p:last-of-type,
+      .markdown-body figure figcaption > p:last-of-type {
+        margin-bottom: 0; }
+  .md > img,
+  .markdown-body > img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  .md hr,
+  .markdown-body hr {
+    border: none;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .md sup, .md sub,
+  .markdown-body sup,
+  .markdown-body sub {
+    font-size: smaller;
+    line-height: 1; }
+  .md sup,
+  .markdown-body sup {
+    vertical-align: super; }
+  .md sub,
+  .markdown-body sub {
+    vertical-align: sub; }
+  .md strong, .md b,
+  .markdown-body strong,
+  .markdown-body b {
+    font-weight: bold; }
+  .md del,
+  .markdown-body del {
+    text-decoration: line-through;
+    color: #858585; }
+  .md em,
+  .markdown-body em {
+    font-style: italic; }
+  .md mark,
+  .markdown-body mark {
+    background-color: rgba(51, 195, 194, 0.24);
+    padding-top: 0.125em;
+    padding-bottom: 0.125em; }
+  .md u,
+  .markdown-body u {
+    border-bottom: 1px solid rgba(51, 195, 194, 0.32);
+    padding-bottom: 2px; }
+  .md details,
+  .markdown-body details {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem; }
+    .md details summary,
+    .markdown-body details summary {
+      font-weight: bold;
+      margin-left: -1rem; }
+  .md .gridGallery,
+  .markdown-body .gridGallery {
+    margin: 0;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-template-columns: 50% 50%;
+    margin-right: 1rem; }
+    @media only screen and (max-width: 414px) {
+      .md .gridGallery,
+      .markdown-body .gridGallery {
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: 100%;
+        margin-right: 0rem; } }
+    .md .gridGallery li,
+    .markdown-body .gridGallery li {
+      list-style-type: none; }
+    .md .gridGallery[class*="figList"],
+    .markdown-body .gridGallery[class*="figList"] {
+      grid-row-gap: 2rem !important; }
+      .md .gridGallery[class*="figList"] li figcaption,
+      .markdown-body .gridGallery[class*="figList"] li figcaption {
+        display: block; }
+      .md .gridGallery[class*="figList"] li figure,
+      .markdown-body .gridGallery[class*="figList"] li figure {
+        display: block;
+        margin: 0; }
+        .md .gridGallery[class*="figList"] li figure .imgFrame,
+        .markdown-body .gridGallery[class*="figList"] li figure .imgFrame {
+          margin: 0;
+          padding-bottom: 100%;
+          overflow: hidden;
+          position: relative; }
+          .md .gridGallery[class*="figList"] li figure .imgFrame img,
+          .markdown-body .gridGallery[class*="figList"] li figure .imgFrame img {
+            width: 100%;
+            padding: 1rem;
+            height: 100%;
+            position: absolute;
+            object-fit: contain; }
+      .md .gridGallery[class*="figList"][class*="-square"] figure .imgFrame,
+      .markdown-body .gridGallery[class*="figList"][class*="-square"] figure .imgFrame {
+        padding-bottom: 100%; }
+        .md .gridGallery[class*="figList"][class*="-square"] figure .imgFrame img,
+        .markdown-body .gridGallery[class*="figList"][class*="-square"] figure .imgFrame img {
+          object-fit: cover; }
+      .md .gridGallery[class*="figList"][class*="-16to9"] figure .imgFrame,
+      .markdown-body .gridGallery[class*="figList"][class*="-16to9"] figure .imgFrame {
+        padding-bottom: 56.25%; }
+        .md .gridGallery[class*="figList"][class*="-16to9"] figure .imgFrame img,
+        .markdown-body .gridGallery[class*="figList"][class*="-16to9"] figure .imgFrame img {
+          object-fit: cover; }
+      .md .gridGallery[class*="figList"][class*="-4to3"] figure .imgFrame,
+      .markdown-body .gridGallery[class*="figList"][class*="-4to3"] figure .imgFrame {
+        padding-bottom: 75%; }
+        .md .gridGallery[class*="figList"][class*="-4to3"] figure .imgFrame img,
+        .markdown-body .gridGallery[class*="figList"][class*="-4to3"] figure .imgFrame img {
+          object-fit: cover; }
+      .md .gridGallery[class*="figList"][class*="--borderless"] figure .imgFrame,
+      .markdown-body .gridGallery[class*="figList"][class*="--borderless"] figure .imgFrame {
+        border: none; }
+        .md .gridGallery[class*="figList"][class*="--borderless"] figure .imgFrame img,
+        .markdown-body .gridGallery[class*="figList"][class*="--borderless"] figure .imgFrame img {
+          padding: 0; }
 
 .abc {
   margin: 2rem 0; }
@@ -124,6 +318,13 @@ img {
     color: #858585;
     font-size: 0.875rem;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     padding: 0 1rem; }
+    .abc figcaption > * {
+      font-size: 87.5%;
+      color: #858585; }
+    .abc figcaption > p:first-of-type {
+      margin-top: 0; }
+    .abc figcaption > p:last-of-type {
+      margin-bottom: 0; }
