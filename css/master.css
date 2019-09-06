@@ -42,10 +42,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.md .gridGallery[class*="figList"] li figure .imgFrame,
-.markdown-body .gridGallery[class*="figList"] li figure .imgFrame {
-  border: 1px solid rgba(0, 0, 0, 0.08); }
-
 html {
   font-size: 16px; }
 
@@ -91,11 +87,10 @@ img {
   .markdown-body h6 {
     line-height: 1.5;
     margin-top: 1em;
-    margin-bottom: 1rem;
-    font-weight: bold; }
+    margin-bottom: 1rem; }
   .md h1,
   .markdown-body h1 {
-    font-size: 2.25rem; }
+    font-size: 2.5rem; }
   .md h2,
   .markdown-body h2 {
     font-size: 1.5rem; }
@@ -259,27 +254,26 @@ img {
         grid-row-gap: 1rem;
         grid-template-columns: 100%;
         margin-right: 0rem; } }
-    .md .gridGallery li,
-    .markdown-body .gridGallery li {
-      list-style-type: none; }
     .md .gridGallery[class*="figList"],
     .markdown-body .gridGallery[class*="figList"] {
       grid-row-gap: 2rem !important; }
-      .md .gridGallery[class*="figList"] li figcaption,
-      .markdown-body .gridGallery[class*="figList"] li figcaption {
+      .md .gridGallery[class*="figList"] figcaption,
+      .markdown-body .gridGallery[class*="figList"] figcaption {
         display: block; }
-      .md .gridGallery[class*="figList"] li figure,
-      .markdown-body .gridGallery[class*="figList"] li figure {
+      .md .gridGallery[class*="figList"] figure,
+      .markdown-body .gridGallery[class*="figList"] figure {
         display: block;
         margin: 0; }
-        .md .gridGallery[class*="figList"] li figure .imgFrame,
-        .markdown-body .gridGallery[class*="figList"] li figure .imgFrame {
+        .md .gridGallery[class*="figList"] figure .imgFrame,
+        .markdown-body .gridGallery[class*="figList"] figure .imgFrame {
           margin: 0;
           padding-bottom: 100%;
           overflow: hidden;
+          outline: 1px solid rgba(0, 0, 0, 0.08);
+          outline-offset: -1px;
           position: relative; }
-          .md .gridGallery[class*="figList"] li figure .imgFrame img,
-          .markdown-body .gridGallery[class*="figList"] li figure .imgFrame img {
+          .md .gridGallery[class*="figList"] figure .imgFrame img,
+          .markdown-body .gridGallery[class*="figList"] figure .imgFrame img {
             width: 100%;
             padding: 1rem;
             height: 100%;
@@ -315,8 +309,6 @@ img {
   .abc figcaption {
     max-width: 800px;
     line-height: 2em;
-    color: #858585;
-    font-size: 0.875rem;
     margin: 0 auto;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -328,3 +320,6 @@ img {
       margin-top: 0; }
     .abc figcaption > p:last-of-type {
       margin-bottom: 0; }
+
+a {
+  color: red; }
