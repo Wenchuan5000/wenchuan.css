@@ -1,0 +1,76 @@
+#navBar
+    height: 64px
+    // overflow: hidden
+    // box-shadow: 0 4px 12px $rgbaBg1
+    box-shadow: 0 1px 0 $rgbaLightPale
+    background-color: white
+    // position: fixed
+    top: 0
+    width: 100%
+    z-index: 1000
+
+    .logo
+        $logoSize: 32px
+
+        width: $logoSize
+        height: $logoSize
+
+        background-color: $rgbaBg1
+
+        position: relative
+        -webkit-transform: translate(0, -50%)
+        float: left
+        top: 50%
+        margin-left: 16px
+
+        border-radius: 50%
+
+
+    .title
+        position: relative
+        -webkit-transform: translate(0, -50%)
+        float: left
+        top: 50%
+        margin-left: 1rem
+        font-size: 1.125rem
+        font-weight: bold
+
+    .items
+        position: relative
+        float: right
+        margin-top: 20px
+        margin-right: 2rem
+
+        li
+            float: left
+            margin-left: 2rem
+            line-height: 24px
+            // top: 50%
+
+#secondaryNavBar
+    z-index: 1000
+    height: 64px
+    box-shadow: 0 1px 0 $rgbaLightPale, 0 -1px 0 $rgbaLightPale
+    background-color: white
+    // margin: 64px 0
+
+    .items
+        max-width: 800px
+        margin-left: auto
+        margin-right: auto
+        padding: 0 1rem
+
+        li
+            float: left
+
+            line-height: 60px
+            margin-top: 2px
+            margin-right: 2rem
+            color: $rgbaGrey
+
+            &.current
+                color: $rgbaDark
+                border-bottom: 2px solid $rgbaDark
+
+            &:hover
+                color: $rgbaDark

@@ -1,0 +1,39 @@
+header
+    &[class*="articleTitle"]
+        display: flex
+        flex-wrap: nowrap
+        position: relative
+
+        max-width: 2200px
+        // max-width: 100%
+
+        margin-left: auto
+        margin-right: auto
+        overflow: hidden
+        height: 1000px
+
+        .cover
+            // width: 100%
+            flex: 1 1 50%
+            object-fit: cover
+
+        .title
+            flex: 1 1 50%
+            margin: 0 auto
+            max-width: 800px
+            padding: 0 4rem
+            margin-top: 4rem
+            margin-bottom: 4rem
+
+            -webkit-transform: translate(0, -50%)
+            margin-top: 500px
+
+            h1
+                font-size: 3rem
+                line-height: 1.5
+                margin: 1rem 0
+
+            p
+                font-size: 1rem
+                line-height: 2
+                margin: 1rem 0

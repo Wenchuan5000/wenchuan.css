@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6
     // font-weight: 200
 
 h1
-    font-size: 2.5rem
+    font-size: 2rem
 
 h2
     font-size: 1.5rem
@@ -30,6 +30,10 @@ h6
     font-size: 0.875rem
     color: $hexGrey
 
+header
+    h1
+        font-size: 2.5rem
+
 
 // ====================
 // 段落们
@@ -46,12 +50,9 @@ p
 // ====================
 p, li, table, blockquote
     a
-        color: $brandColor
+        color: inherit
         cursor: pointer
-        // text-decoration: underline
-
-        &:hover
-            // text-decoration: underline
+        text-decoration: underline
 
 
 // ====================
@@ -111,14 +112,19 @@ blockquote
 
 // figure 图片
 figure
-    display: table
+    // display: table
     margin-left: auto
     margin-right: auto
     margin-top: 2rem
     margin-bottom: 2rem
 
+    img
+        margin-left: auto
+        margin-right: auto
+        width: 100%
+
     figcaption
-        display: table-caption
+        // display: table-caption
         caption-side: bottom
         margin-top: 0.5rem
 
@@ -184,11 +190,24 @@ mark
     background-color: rgba($brandColor, 0.24)
     padding-top: 0.125em
     padding-bottom: 0.125em
+    cursor: pointer
+    transition: background-color 0.2s ease-in-out
+
+    &:hover
+        background-color: rgba($brandColor, 0.40)
 
 u
-    border-bottom: 1px solid rgba($brandColor, 0.32)
-    padding-bottom: 2px
+    // border-bottom: 1px solid rgba($brandColor, 0.32)
+    // padding-bottom: 2px
 
+    background-color: rgba($brandColor, 0.24)
+    padding-top: 0.125em
+    padding-bottom: 0.125em
+    cursor: pointer
+    transition: background-color 0.2s ease-in-out
+
+    &:hover
+        background-color: rgba($brandColor, 0.40)
 
 // ====================
 // 细节们
